@@ -10,6 +10,7 @@ public class Geometry {
         System.out.println(tr1 + "\nisRight=" + tr1.isRight() + " isIsosceles=" + tr1.isIsosceles() + " isEquilateral=" + tr1.isEquilateral() +
                             "\nperimeter=" + tr1.perimeter() + " area=" + tr1.area());
         Quadrangle quad = new Quadrangle(0,0,1,0,1,1,0,1);
-        System.out.println(quad + "\nisRectangle=" + quad.isRectangle());
+        System.out.println(quad + "\nisRectangle=" + quad.isRectangle() +
+                            "\nperimeter=" + quad.perimeter() + " area=" + quad.area());
     }
 }

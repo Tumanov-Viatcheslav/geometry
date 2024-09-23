@@ -2,7 +2,7 @@ package figures;
 
 import java.util.Arrays;
 
-public class Quadrangle {
+public class Quadrangle extends Figure {
     private Point[] points = new Point[4];
 
     public Quadrangle(Point p1, Point p2, Point p3, Point p4) {
@@ -31,6 +31,17 @@ public class Quadrangle {
         if (!(new Triangle(points[3], points[0], points[1]).isRight()))
             return false;
         return (new Triangle(points[2], points[3], points[0]).isRight());
+    }
+
+    @Override
+    public double perimeter() {
+        return points[0].distanceToPoint(points[1]) + points[1].distanceToPoint(points[2]) + points[2].distanceToPoint(points[3]) + points[3].distanceToPoint(points[0]);
+    }
+
+    //Only for convex quadrangle
+    @Override
+    public double area() {
+        return new Triangle(points[0], points[1], points[2]).area() + new Triangle(points[2], points[3], points[0]).area();
     }
 
     @Override

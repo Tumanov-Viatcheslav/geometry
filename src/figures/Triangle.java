@@ -2,7 +2,7 @@ package figures;
 
 import java.util.Arrays;
 
-public class Triangle {
+public class Triangle extends Figure {
     private Point[] points = new Point[3];
 
     public Triangle(Point p1, Point p2, Point p3) {
@@ -55,7 +55,7 @@ public class Triangle {
     }
 
     public double perimeter() {
-        return points[0].distanceToPoint(points[1]) + points[1].distanceToPoint(points[2]) +points[2].distanceToPoint(points[0]);
+        return points[0].distanceToPoint(points[1]) + points[1].distanceToPoint(points[2]) + points[2].distanceToPoint(points[0]);
     }
 
     public double area() {
