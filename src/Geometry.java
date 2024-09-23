@@ -2,7 +2,7 @@ import figures.Circle;
 import figures.Quadrangle;
 import figures.Triangle;
 
-public class FiguresClasses {
+public class Geometry {
     public static void main(String[] args) {
         Circle c = new Circle(2, 0, 1);
         System.out.println(c.toString() + "\nperimeter=" + c.perimeter() + " area=" + c.area());
