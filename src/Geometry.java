@@ -1,4 +1,5 @@
 import figures.Circle;
+import figures.Figure;
 import figures.Quadrangle;
 import figures.Triangle;
 
@@ -12,5 +13,11 @@ public class Geometry {
         Quadrangle quad = new Quadrangle(0,0,1,0,1,1,0,1);
         System.out.println(quad + "\nisRectangle=" + quad.isRectangle() +
                             "\nperimeter=" + quad.perimeter() + " area=" + quad.area());
+        Figure[] figs = {c, tr1, quad};
+        double sum = 0;
+        for (Figure fig: figs) {
+            sum += fig.area();
+        }
+        System.out.println("total_area=" + sum);
     }
 }
