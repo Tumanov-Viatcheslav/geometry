@@ -59,11 +59,9 @@ public class Triangle {
     }
 
     public double area() {
-        double side1 = points[0].distanceToPoint(points[1]),
-                side2 = points[1].distanceToPoint(points[2]),
-                side3 = points[2].distanceToPoint(points[0]),
-                semiper = perimeter() / 2;
-        return Math.sqrt(semiper * (semiper - side1) * (semiper - side2) * (semiper - side3));
+        double x1 = points[0].getX(), x2 = points[1].getX(), x3 = points[2].getX(),
+                y1 = points[0].getY(), y2 = points[1].getY(), y3 = points[2].getY();
+        return 0.5 * ((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3));
     }
 
     @Override

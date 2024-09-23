@@ -16,6 +16,14 @@ public class Point {
         return (p.x - x) * (p.x - x) + (p.y - y) * (p.y - y);
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
     @Override
     public String toString() {
         return "Point{" +
